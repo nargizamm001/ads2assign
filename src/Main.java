@@ -1,15 +1,25 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        MyArrayList<Integer> arr = new MyArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+        System.out.println("ArrayList size: " + arr.size());
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        MyStack<String> stack = new MyStack<>();
+        stack.push("hello");
+        stack.push("world");
+        System.out.println("Stack pop: " + stack.pop());
+
+        MyQueue<Integer> queue = new MyQueue<>();
+        queue.enqueue(10);
+        queue.enqueue(20);
+        System.out.println("Queue dequeue: " + queue.dequeue());
+
+        MyMinHeap<Integer> heap = new MyMinHeap<>();
+        heap.add(5);
+        heap.add(3);
+        heap.add(7);
+        System.out.println("Heap peek: " + heap.peek());
     }
 }
